@@ -1,4 +1,4 @@
-const coloredReindeerBuilder = function () {
+export const coloredReindeerBuilder = function () {
     const reindeer = ["Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
     const coloredReindeer = []
     // Write a for loop that looks at each reindeer
@@ -9,7 +9,7 @@ const coloredReindeerBuilder = function () {
 
     // Return coloredReindeer array
 
-    for (deer of reindeer) {
+    for (const deer of reindeer) {
         const newDeer = deerFactory(deer)
         coloredReindeer.push(newDeer)
     }
@@ -29,14 +29,12 @@ const colorGenerator = function* () {
     const colorPallete = ["Blue", "Red", "Orange", "Purple", "Goldenrod", "Aquamarine", "Olive", 
                           "Azure", "Fuchsia", "Chocolate", "Salmon", "Amaranth"]
 
-    for (color of colorPallete){
+    for (const color of colorPallete){
         yield color
     }
 }
 
 const colors = colorGenerator()
+// const reindeerArray = coloredReindeerBuilder()
 
-reindeerArray = coloredReindeerBuilder()
-
-console.log(reindeerArray)
-
+// export default reindeerArray
